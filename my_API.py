@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 app = FastAPI()
 
 
@@ -40,5 +41,7 @@ async def calculator(resp: Resp):
         return {"Error": "Operation not recognized. Please try again!"}
 
     return {"Result": result}
+
+
 
 

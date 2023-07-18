@@ -1,6 +1,6 @@
 from requests import post
 
-response = post("http://localhost:8000/calculator", json={"value1": 23, "value2": 2, "operation": "+"})
+response = post("http://localhost:8000/calculator", json={"value1": 23, "value2": 3, "operation": "*"})
 if response.status_code == 200:
     result = response.json()
     if result is not None:
