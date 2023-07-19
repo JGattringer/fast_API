@@ -17,7 +17,7 @@ Before running the API, make sure you have the following dependencies installed:
 1. Clone the repository:
 
 ```bash
-git clone <(https://github.com/JGattringer/fast_API.git)https://github.com/JGattringer/fast_API.git>
+git clone <(https://github.com/JGattringer/fast_API.git)>
 
 2. Install the required dependencies using pip:
 
