@@ -1,7 +1,16 @@
+"""
+Response Post
+
+This module demonstrates sending a POST request to the calculator endpoint of the API
+and handling the response.
+It uses the requests library to make the HTTP request.
+"""
+
 from requests import post
 
-# Send a POST request to the calculator endpoint
-response = post("http://localhost:8000/calculator", json={"value1": 23, "value2": 0, "operation": "/"})
+# Send a POST request to the calculator endpoint with a timeout of 5 seconds
+response = post("http://localhost:8000/calculator", json={"value1": 23, "value2": 0, "operation": "/"}, timeout=5)
+
 if response.status_code == 200:
     # If the request is successful (status code 200)
     result = response.json()

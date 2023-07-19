@@ -1,8 +1,18 @@
+"""
+My API
+
+This module implements a simple API that provides a calculator functionality.
+It is built using the FastAPI framework and utilizes the Pydantic library
+for request body validation.
+"""
+
+
 from fastapi import FastAPI
 from pydantic import BaseModel
 
 # Create an instance of FastAPI
 app = FastAPI()
+
 
 # Root endpoint
 @app.get("/")
@@ -59,7 +69,11 @@ async def calculator(resp: Resp):
             result = str(value1 / value2)
         else:
             # Error: Division by zero
-            return {"Error": "Division by zero cannot be done, please try again with a non-zero number!"}
+            return {
+                "Error": "Division by zero cannot be done,"
+                         "please try again with a non-zero number!"
+                    }
+
     elif operation == "*":
         # Multiplication operation
         result = str(value1 * value2)
@@ -69,4 +83,3 @@ async def calculator(resp: Resp):
 
     # Return the result
     return {"Result": result}
-

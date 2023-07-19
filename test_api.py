@@ -1,6 +1,13 @@
+"""
+Test API
+
+This module contains test cases for the calculator endpoint of the API.
+It utilizes the pytest framework and the FastAPI test client.
+"""
+
 import pytest
 from fastapi.testclient import TestClient
-from my_API import app
+from my_api import app
 
 client = TestClient(app)
 
@@ -62,10 +69,6 @@ def test_division_by_zero():
     if result is not None:
         result = round(result)  # Apply rounding to the result if it's not None
     assert result is None  # Use the 'is' operator to compare with None
-
-
-
-
 
 
 if __name__ == "__main__":
